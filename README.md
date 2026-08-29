@@ -1,50 +1,60 @@
-# ⚙️ SIWES Logbook — Backend API
+# SIWES Logbook - Backend API
 
-The **RESTful backend** for the SIWES Logbook system — a modular Express + MySQL API powering student logs, school administration, organization placements, and supervision workflows.
+## Overview
 
-## ✨ Highlights
+A modular RESTful backend for the SIWES Logbook system, built with Express and MySQL. The API powers student log recording, school administration, organization placement workflows, and supervision management across multiple roles.
 
-- 🗂️ **Modular architecture** — every domain lives in its own module (`Student`, `School`, `Organization`, `Placement`, `Logbook`, `Leave`, `Admin`, `Support`, `Auth`)
-- 🔐 **Full authentication flows** — signup, signin, OTP send & verify, and role-based access
-- 🏫 **School CRUD** — manage students, departments, and supervisors
-- 🏢 **Organization workflows** — create supervisors, assign them to students, and manage placements
-- 📩 **Transactional email** — EmailJS integration for OTP and notifications
-- 🖼️ **Media uploads** — Cloudinary + Multer for profile images and attachments
+## Key Features
 
-## 🧱 Tech Stack
+- **Modular architecture:** Each domain is isolated in its own module (Student, School, Organization, Placement, Logbook, Leave, Admin, Support, Auth)
+- **Authentication flows:** Signup, signin, OTP send and verification, with role-based access control
+- **School management:** Full CRUD operations for students, departments, and supervisors
+- **Organization workflows:** Supervisor creation, student assignment, and placement management
+- **Transactional email:** OTP and notification delivery via EmailJS
+- **Media handling:** Profile images and attachments processed with Multer and stored on Cloudinary
 
-- **Node.js + Express 5**
-- **MySQL 2** (mysql2 driver)
-- **Multer** — file uploads
-- **Cloudinary** — media storage
-- **EmailJS (@emailjs/nodejs)** — email delivery
-- **CORS + dotenv** — configuration & security
+## Technology Stack
 
-## 🚀 Getting Started
+- Node.js with Express 5
+- MySQL (mysql2 driver)
+- Multer (file uploads)
+- Cloudinary (media storage)
+- EmailJS (email delivery)
+- CORS and dotenv (configuration and security)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- MySQL database
+- Cloudinary and EmailJS accounts
+
+### Installation
 
 ```bash
 git clone https://github.com/Tech-Guru19/siwes-logbook-backend-c.git
 cd siwes-logbook-backend-c
 npm install
-cp .env.example .env   # add your DB + Cloudinary + EmailJS keys
+cp .env.example .env   # Configure database, Cloudinary and EmailJS credentials
 npm start
 ```
 
-## 🔌 Core API Modules
+## API Modules
 
 | Module | Responsibility |
 |---|---|
-| `Module/Auth` | OTP send & verification |
-| `Module/Student` | Signup, signin, profile |
-| `Module/School` | School signup, students, departments, supervisors |
-| `Module/Organization` | Org signup, supervisor creation & assignment |
-| `Module/OrganizationSupervisor` | Supervisor signup/signin + CRUD |
-| `Module/Placement` | Apply, fetch, status |
-| `Module/Logbook` | Daily log CRUD |
-| `Module/Leave` | Leave requests |
-| `Module/Admin` | Admin operations |
-| `Module/Support` | Support tickets |
+| Module/Auth | OTP send and verification |
+| Module/Student | Signup, signin, profile |
+| Module/School | School signup, students, departments, supervisors |
+| Module/Organization | Organization signup, supervisor creation and assignment |
+| Module/OrganizationSupervisor | Supervisor signup, signin and CRUD operations |
+| Module/Placement | Placement apply, fetch, status |
+| Module/Logbook | Daily log CRUD operations |
+| Module/Leave | Leave request management |
+| Module/Admin | Administrative operations |
+| Module/Support | Support ticket management |
 
-## 👩‍💻 Author
+## Author
 
-**[Obiasogu Esther Chizaram](https://github.com/Tech-Guru19)**
+[Obiasogu Esther Chizaram](https://github.com/Tech-Guru19)
